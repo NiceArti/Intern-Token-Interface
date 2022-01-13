@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "homepage": "http://NiceArti.github.io/intern-token",
+  "homepage": "http://nicearti.github.io/intern-token-interface",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
