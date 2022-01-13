@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "lite-server": "^2.6.1",
     "react": "16.11.0",
     "react-dom": "16.11.0",
     "react-scripts": "3.2.0",
@@ -31,8 +30,8 @@
     ]
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "bs-config.js",
+  "main": "package.js",
   "devDependencies": {},
-  "author": "",
+  "author": "Cravcenco Nichita",
   "license": "ISC"
 }
