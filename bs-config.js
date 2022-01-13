@@ -4,6 +4,6 @@ module.exports =
     files: ["./**/*.{html,htm,css,js}"],
     server:
     {
-        baseDir: ["./client","./build/contracts"]
+        baseDir: ["./src","./src/contracts"]
     }
 }
