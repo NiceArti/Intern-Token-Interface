@@ -76,6 +76,8 @@ class App extends Component {
       // Catch any errors for any of the above operations.
       alert(`Failed to load web3, accounts, or contract. Check console for details.`);
       console.error(error);
+
+      
     }
   };
 
@@ -169,7 +171,10 @@ class App extends Component {
     if (!this.state.web3) {
       return (
         <div id="switch">
-          Switch network to Ropsten!!!
+          Wait untill loading!<br/> <br/>
+          If loading is too long<br/>
+          switch network to Ropsten <br/>
+          or send message to developers!!!
         </div>
       );
     }
