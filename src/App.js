@@ -150,7 +150,7 @@ class App extends Component {
   {
     e.preventDefault();
     const {anotherAccount, contract, accounts} = this.state;
-    await contract.methods.addToWhitelist(anotherAccount, anotherAccount).send({from: accounts[0]});
+    await contract.methods.addToWhitelist(anotherAccount).send({from: accounts[0]});
   }
 
 
