@@ -214,66 +214,66 @@ class App extends Component {
           <table>
             <thead>
               <tr>
-                <th>Telegram</th>
-                <th>Name</th>
-                <th>Address</th>
-                <th>Balance</th>
+                <th class="untouch">Telegram</th>
+                <th class="untouch">Name</th>
+                <th class="untouch">Address</th>
+                <th class="untouch">Balance</th>
               </tr>
             </thead>
             <tbody> 
               <tr>
                 <td>@flexxxbob</td>
-                <td>Alexander</td>
+                <td class="untouch">Alexander</td>
                 <td>0xb0eDDC579AF621657dC0A7CE3016FA02a35B616A</td>
-                <td>{this.state.balanceOfSasha} INT</td>
+                <td class="untouch">{this.state.balanceOfSasha} INT</td>
               </tr>
               <tr>
                 <td>@Valdemar1337</td>
-                <td>Vladimir</td>
+                <td class="untouch">Vladimir</td>
                 <td>0xc1fADc7346e3f3D36c29cdb88725679416bd603a</td>
-                <td>{this.state.balanceOfVova} INT</td>
+                <td class="untouch">{this.state.balanceOfVova} INT</td>
               </tr>
               <tr>
                 <td>@Nektarines</td>
-                <td>Nichita</td>
+                <td class="untouch">Nichita</td>
                 <td>0xcfcb8fee75E86865718f608B3BCcB582B4D7C560</td>
-                <td>{this.state.balanceOfNikita} INT</td>
+                <td class="untouch">{this.state.balanceOfNikita} INT</td>
               </tr>
               <tr>
                 <td>@zhaukenove</td>
-                <td>Yerkebulan</td>
+                <td class="untouch">Yerkebulan</td>
                 <td>0x2787DeB7Cb801858CfD3AE8532C15EAa9b6925F2</td>
-                <td>{this.state.balanceOfErke} INT</td>
+                <td class="untouch">{this.state.balanceOfErke} INT</td>
               </tr>
               <tr>
                 <td>@Igorterzi</td>
-                <td>Igor</td>
+                <td class="untouch">Igor</td>
                 <td>0xdB44F63e0Ae6F2166c2f990a4dC877D4bDDCa500</td>
-                <td>{this.state.balanceOfIgor} INT</td>
+                <td class="untouch">{this.state.balanceOfIgor} INT</td>
               </tr>
               <tr>
                 <td>@vadim_peev</td>
-                <td>Vadim</td>
+                <td class="untouch">Vadim</td>
                 <td>0x27bE67f7EEd685E4eBe96e0B0DE08A9f30b8b8D2</td>
-                <td>{this.state.balanceOfVadim} INT</td>
+                <td class="untouch">{this.state.balanceOfVadim} INT</td>
               </tr>
               <tr>
                 <td>@sweetbubalehj</td>
-                <td>Egor</td>
+                <td class="untouch">Egor</td>
                 <td>0x0B89aafa6328dbA176Ea91eA04859241991c386A</td>
-                <td>{this.state.balanceOfEgor} INT</td>
+                <td class="untouch">{this.state.balanceOfEgor} INT</td>
               </tr>
               <tr>
                 <td>@Kcintes</td>
-                <td>Nicolai</td>
+                <td class="untouch">Nicolai</td>
                 <td>0x468172566756063Cc52ab6C020aE9c9583D9AB95</td>
-                <td>{this.state.balanceOfNicolai} INT</td>
+                <td class="untouch">{this.state.balanceOfNicolai} INT</td>
               </tr>
               <tr>
                 <td>@s_tomayli</td>
-                <td>Slava</td>
+                <td class="untouch">Slava</td>
                 <td>0x48c5e730125565435e9E9D70CbD680bb7819bbCD</td>
-                <td>{this.state.balanceOfSlava} INT</td>
+                <td class="untouch">{this.state.balanceOfSlava} INT</td>
               </tr>
             </tbody>
           </table>
