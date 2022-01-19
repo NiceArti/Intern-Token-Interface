@@ -157,3 +157,8 @@ tr:nth-child(odd){
 th{
   background-color: #0a0d18;
 }
+
+.underline:hover
+{
+  text-decoration: underline;
+}

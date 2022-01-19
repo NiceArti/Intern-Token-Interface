@@ -166,6 +166,40 @@ class App extends Component {
     this.setState({amount: e.target.value})
   }
 
+  CopyToClipboard()
+  {
+    /* Get the text field */
+    var tableCell = document.getElementById('addrToCopy');
+    var copyText = tableCell.textContent;
+
+    /* Copy the text inside the text field */
+    const el = document.createElement('textarea');
+    el.value = copyText;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+
+    /* Alert the copied text */
+    alert("Copied");
+  }
+
+  CopyToClipboardToken()
+  {
+    /* Get the text field */
+    var tableCell = document.getElementById('addrToCopyToken');
+    var copyText = tableCell.textContent;
+
+    /* Copy the text inside the text field */
+    const el = document.createElement('textarea');
+    el.value = copyText;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+
+    /* Alert the copied text */
+    alert("Copied");
+  }
+
 
   render() {
     if (!this.state.web3) {
@@ -182,7 +216,10 @@ class App extends Component {
       <div className="App">
         <div id="header">
           <span id="balance" >Balance: {this.state.balanceOfMsgSender} INT</span>
-          <span id="account" ><span class="account-type">Account: </span>{this.state.accounts}</span>
+          <span id="account" >
+            <span class="account-type">Account: </span>
+            <span id="addrToCopy" class="underline" onClick={this.CopyToClipboard}>{this.state.accounts}</span>
+          </span>
         </div>
 
         <div id="content">
@@ -224,7 +261,7 @@ class App extends Component {
               <tr>
                 <td>@flexxxbob</td>
                 <td class="untouch">Alexander</td>
-                <td>0xb0eDDC579AF621657dC0A7CE3016FA02a35B616A</td>
+                <td class="underline"> 0xb0eDDC579AF621657dC0A7CE3016FA02a35B616A</td>
                 <td class="untouch">{this.state.balanceOfSasha} INT</td>
               </tr>
               <tr>
@@ -236,43 +273,43 @@ class App extends Component {
               <tr>
                 <td>@Nektarines</td>
                 <td class="untouch">Nichita</td>
-                <td>0xcfcb8fee75E86865718f608B3BCcB582B4D7C560</td>
+                <td class="underline">0xcfcb8fee75E86865718f608B3BCcB582B4D7C560</td>
                 <td class="untouch">{this.state.balanceOfNikita} INT</td>
               </tr>
               <tr>
                 <td>@zhaukenove</td>
                 <td class="untouch">Yerkebulan</td>
-                <td>0x2787DeB7Cb801858CfD3AE8532C15EAa9b6925F2</td>
+                <td class="underline">0x2787DeB7Cb801858CfD3AE8532C15EAa9b6925F2</td>
                 <td class="untouch">{this.state.balanceOfErke} INT</td>
               </tr>
               <tr>
                 <td>@Igorterzi</td>
                 <td class="untouch">Igor</td>
-                <td>0xdB44F63e0Ae6F2166c2f990a4dC877D4bDDCa500</td>
+                <td class="underline">0xdB44F63e0Ae6F2166c2f990a4dC877D4bDDCa500</td>
                 <td class="untouch">{this.state.balanceOfIgor} INT</td>
               </tr>
               <tr>
                 <td>@vadim_peev</td>
                 <td class="untouch">Vadim</td>
-                <td>0x27bE67f7EEd685E4eBe96e0B0DE08A9f30b8b8D2</td>
+                <td class="underline">0x27bE67f7EEd685E4eBe96e0B0DE08A9f30b8b8D2</td>
                 <td class="untouch">{this.state.balanceOfVadim} INT</td>
               </tr>
               <tr>
                 <td>@sweetbubalehj</td>
                 <td class="untouch">Egor</td>
-                <td>0x0B89aafa6328dbA176Ea91eA04859241991c386A</td>
+                <td class="underline">0x0B89aafa6328dbA176Ea91eA04859241991c386A</td>
                 <td class="untouch">{this.state.balanceOfEgor} INT</td>
               </tr>
               <tr>
                 <td>@Kcintes</td>
                 <td class="untouch">Nicolai</td>
-                <td>0x468172566756063Cc52ab6C020aE9c9583D9AB95</td>
+                <td class="underline">0x468172566756063Cc52ab6C020aE9c9583D9AB95</td>
                 <td class="untouch">{this.state.balanceOfNicolai} INT</td>
               </tr>
               <tr>
                 <td>@s_tomayli</td>
                 <td class="untouch">Slava</td>
-                <td>0x48c5e730125565435e9E9D70CbD680bb7819bbCD</td>
+                <td class="underline">0x48c5e730125565435e9E9D70CbD680bb7819bbCD</td>
                 <td class="untouch">{this.state.balanceOfSlava} INT</td>
               </tr>
             </tbody>
@@ -280,7 +317,8 @@ class App extends Component {
         </div>
 
         <div id="token">
-          <span class="account-type">Token: </span>{this.state.tokenAddress}
+          <span class="account-type">Token: </span>
+          <span id="addrToCopyToken" class="underline" onClick={this.CopyToClipboardToken}>{this.state.tokenAddress} </span>
         </div>
 
       </div>
