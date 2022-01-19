@@ -47,7 +47,7 @@ header
   user-select: none; /* Standard */
 }
 
-#switch
+.switch
 {
   top:30%;
   color:#16171a;
@@ -63,6 +63,25 @@ header
   -ms-user-select: none; /* IE10+/Edge */
   user-select: none; /* Standard */
   box-shadow: 2px 3px 10px 5px rgb(37, 37, 37);
+}
+
+#switch-2
+{
+  top:50%;
+  color:#16171a;
+  background: #dadada;
+  position: absolute;
+  padding: 20px 50px 20px 50px;
+  text-align: center;
+  border-radius: 10px;
+  left:50%;
+  transform: translate(-50%, -50%);
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+  box-shadow: 2px 3px 10px 5px rgb(37, 37, 37);
+  display: none;
 }
 
 .untouch
