@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c5ab0355e6b00048f84fc99bf3fab5b4",
+    "revision": "21e9233c888b90f19ea88b68065b7fab",
     "url": "/Intern-Token-Interface/index.html"
   },
   {
-    "revision": "7b96fddb152424bfca78",
+    "revision": "8bf1d407b3f048183c7f",
     "url": "/Intern-Token-Interface/static/css/main.b3deb7e5.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Intern-Token-Interface/static/js/2.4b56409e.chunk.js"
   },
   {
-    "revision": "7b96fddb152424bfca78",
-    "url": "/Intern-Token-Interface/static/js/main.2b52ce7e.chunk.js"
+    "revision": "8bf1d407b3f048183c7f",
+    "url": "/Intern-Token-Interface/static/js/main.4e4c87d1.chunk.js"
   },
   {
     "revision": "c909fbbcf76403e3b5f2",
