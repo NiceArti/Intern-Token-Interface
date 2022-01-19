@@ -222,58 +222,58 @@ class App extends Component {
             </thead>
             <tbody> 
               <tr>
-                <th>@flexxxbob</th>
-                <th>Alexander</th>
-                <th>0xb0eDDC579AF621657dC0A7CE3016FA02a35B616A</th>
-                <th>{this.state.balanceOfSasha} INT</th>
+                <td>@flexxxbob</td>
+                <td>Alexander</td>
+                <td>0xb0eDDC579AF621657dC0A7CE3016FA02a35B616A</td>
+                <td>{this.state.balanceOfSasha} INT</td>
               </tr>
               <tr>
-                <th>@Valdemar1337</th>
-                <th>Vladimir</th>
-                <th>0xc1fADc7346e3f3D36c29cdb88725679416bd603a</th>
-                <th>{this.state.balanceOfVova} INT</th>
+                <td>@Valdemar1337</td>
+                <td>Vladimir</td>
+                <td>0xc1fADc7346e3f3D36c29cdb88725679416bd603a</td>
+                <td>{this.state.balanceOfVova} INT</td>
               </tr>
               <tr>
-                <th>@Nektarines</th>
-                <th>Nichita</th>
-                <th>0xcfcb8fee75E86865718f608B3BCcB582B4D7C560</th>
-                <th>{this.state.balanceOfNikita} INT</th>
+                <td>@Nektarines</td>
+                <td>Nichita</td>
+                <td>0xcfcb8fee75E86865718f608B3BCcB582B4D7C560</td>
+                <td>{this.state.balanceOfNikita} INT</td>
               </tr>
               <tr>
-                <th>@zhaukenove</th>
-                <th>Yerkebulan</th>
-                <th>0x2787DeB7Cb801858CfD3AE8532C15EAa9b6925F2</th>
-                <th>{this.state.balanceOfErke} INT</th>
+                <td>@zhaukenove</td>
+                <td>Yerkebulan</td>
+                <td>0x2787DeB7Cb801858CfD3AE8532C15EAa9b6925F2</td>
+                <td>{this.state.balanceOfErke} INT</td>
               </tr>
               <tr>
-                <th>@Igorterzi</th>
-                <th>Igor</th>
-                <th>0xdB44F63e0Ae6F2166c2f990a4dC877D4bDDCa500</th>
-                <th>{this.state.balanceOfIgor} INT</th>
+                <td>@Igorterzi</td>
+                <td>Igor</td>
+                <td>0xdB44F63e0Ae6F2166c2f990a4dC877D4bDDCa500</td>
+                <td>{this.state.balanceOfIgor} INT</td>
               </tr>
               <tr>
-                <th>@vadim_peev</th>
-                <th>Vadim</th>
-                <th>0x27bE67f7EEd685E4eBe96e0B0DE08A9f30b8b8D2</th>
-                <th>{this.state.balanceOfVadim} INT</th>
+                <td>@vadim_peev</td>
+                <td>Vadim</td>
+                <td>0x27bE67f7EEd685E4eBe96e0B0DE08A9f30b8b8D2</td>
+                <td>{this.state.balanceOfVadim} INT</td>
               </tr>
               <tr>
-                <th>@sweetbubalehj</th>
-                <th>Egor</th>
-                <th>0x0B89aafa6328dbA176Ea91eA04859241991c386A</th>
-                <th>{this.state.balanceOfEgor} INT</th>
+                <td>@sweetbubalehj</td>
+                <td>Egor</td>
+                <td>0x0B89aafa6328dbA176Ea91eA04859241991c386A</td>
+                <td>{this.state.balanceOfEgor} INT</td>
               </tr>
               <tr>
-                <th>@Kcintes</th>
-                <th>Nicolai</th>
-                <th>0x468172566756063Cc52ab6C020aE9c9583D9AB95</th>
-                <th>{this.state.balanceOfNicolai} INT</th>
+                <td>@Kcintes</td>
+                <td>Nicolai</td>
+                <td>0x468172566756063Cc52ab6C020aE9c9583D9AB95</td>
+                <td>{this.state.balanceOfNicolai} INT</td>
               </tr>
               <tr>
-                <th>@s_tomayli</th>
-                <th>Slava</th>
-                <th>0x48c5e730125565435e9E9D70CbD680bb7819bbCD</th>
-                <th>{this.state.balanceOfSlava} INT</th>
+                <td>@s_tomayli</td>
+                <td>Slava</td>
+                <td>0x48c5e730125565435e9E9D70CbD680bb7819bbCD</td>
+                <td>{this.state.balanceOfSlava} INT</td>
               </tr>
             </tbody>
           </table>

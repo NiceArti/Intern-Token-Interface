@@ -137,3 +137,15 @@ td, th {
   transform: translate(-50%);
   top: 85%;
 }
+
+tr:nth-child(even) {
+  background: #33343a;
+}
+
+tr:nth-child(odd){
+  background-color: #212227;
+}
+
+th{
+  background-color: #0a0d18;
+}
