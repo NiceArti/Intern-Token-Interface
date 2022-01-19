@@ -437,7 +437,7 @@ class App extends Component {
           <span id="balance" >Balance: {this.state.balanceOfMsgSender} INT</span>
           <span id="account" >
             <span class="account-type">Account: </span>
-            <span id="addrToCopy" class="underline" onClick={this.CopyToClipboard}>{this.state.accounts}</span>
+            <span id="addrToCopy" class="underline untouch" onClick={this.CopyToClipboard}>{this.state.accounts}</span>
           </span>
         </div>
 
@@ -480,55 +480,55 @@ class App extends Component {
               <tr>
                 <td>@flexxxbob</td>
                 <td class="untouch">Alexander</td>
-                <td class="underline" id="1" onClick={this.CopyToClipboard1}> 0xb0eDDC579AF621657dC0A7CE3016FA02a35B616A</td>
+                <td class="underline untouch" id="1" onClick={this.CopyToClipboard1}> 0xb0eDDC579AF621657dC0A7CE3016FA02a35B616A</td>
                 <td class="untouch">{this.state.balanceOfSasha} INT</td>
               </tr>
               <tr>
                 <td>@Valdemar1337</td>
                 <td class="untouch">Vladimir</td>
-                <td class="underline" id="2" onClick={this.CopyToClipboard2}>0xc1fADc7346e3f3D36c29cdb88725679416bd603a</td>
+                <td class="underline untouch" id="2" onClick={this.CopyToClipboard2}>0xc1fADc7346e3f3D36c29cdb88725679416bd603a</td>
                 <td class="untouch">{this.state.balanceOfVova} INT</td>
               </tr>
               <tr>
                 <td>@Nektarines</td>
                 <td class="untouch">Nichita</td>
-                <td class="underline" id="3" onClick={this.CopyToClipboard3}>0xcfcb8fee75E86865718f608B3BCcB582B4D7C560</td>
+                <td class="underline untouch" id="3" onClick={this.CopyToClipboard3}>0xcfcb8fee75E86865718f608B3BCcB582B4D7C560</td>
                 <td class="untouch">{this.state.balanceOfNikita} INT</td>
               </tr>
               <tr>
                 <td>@zhaukenove</td>
                 <td class="untouch">Yerkebulan</td>
-                <td class="underline" id="4" onClick={this.CopyToClipboard4}>0x2787DeB7Cb801858CfD3AE8532C15EAa9b6925F2</td>
+                <td class="underline untouch" id="4" onClick={this.CopyToClipboard4}>0x2787DeB7Cb801858CfD3AE8532C15EAa9b6925F2</td>
                 <td class="untouch">{this.state.balanceOfErke} INT</td>
               </tr>
               <tr>
                 <td>@Igorterzi</td>
                 <td class="untouch">Igor</td>
-                <td class="underline" id="5" onClick={this.CopyToClipboard5}>0xdB44F63e0Ae6F2166c2f990a4dC877D4bDDCa500</td>
+                <td class="underline untouch" id="5" onClick={this.CopyToClipboard5}>0xdB44F63e0Ae6F2166c2f990a4dC877D4bDDCa500</td>
                 <td class="untouch">{this.state.balanceOfIgor} INT</td>
               </tr>
               <tr>
                 <td>@vadim_peev</td>
                 <td class="untouch">Vadim</td>
-                <td class="underline" id="6" onClick={this.CopyToClipboard6}>0x27bE67f7EEd685E4eBe96e0B0DE08A9f30b8b8D2</td>
+                <td class="underline untouch" id="6" onClick={this.CopyToClipboard6}>0x27bE67f7EEd685E4eBe96e0B0DE08A9f30b8b8D2</td>
                 <td class="untouch">{this.state.balanceOfVadim} INT</td>
               </tr>
               <tr>
                 <td>@sweetbubalehj</td>
                 <td class="untouch">Egor</td>
-                <td class="underline" id="7" onClick={this.CopyToClipboard7}>0x0B89aafa6328dbA176Ea91eA04859241991c386A</td>
+                <td class="underline untouch" id="7" onClick={this.CopyToClipboard7}>0x0B89aafa6328dbA176Ea91eA04859241991c386A</td>
                 <td class="untouch">{this.state.balanceOfEgor} INT</td>
               </tr>
               <tr>
                 <td>@Kcintes</td>
                 <td class="untouch">Nicolai</td>
-                <td class="underline" id="8" onClick={this.CopyToClipboard8}>0x468172566756063Cc52ab6C020aE9c9583D9AB95</td>
+                <td class="underline untouch" id="8" onClick={this.CopyToClipboard8}>0x468172566756063Cc52ab6C020aE9c9583D9AB95</td>
                 <td class="untouch">{this.state.balanceOfNicolai} INT</td>
               </tr>
               <tr>
                 <td>@s_tomayli</td>
                 <td class="untouch">Slava</td>
-                <td class="underline" id="9" onClick={this.CopyToClipboard9}>0x48c5e730125565435e9E9D70CbD680bb7819bbCD</td>
+                <td class="underline untouch" id="9" onClick={this.CopyToClipboard9}>0x48c5e730125565435e9E9D70CbD680bb7819bbCD</td>
                 <td class="untouch">{this.state.balanceOfSlava} INT</td>
               </tr>
             </tbody>
@@ -537,7 +537,7 @@ class App extends Component {
 
         <div id="token">
           <span class="account-type">Token: </span>
-          <span id="addrToCopyToken" class="underline" onClick={this.CopyToClipboardToken}>{this.state.tokenAddress} </span>
+          <span id="addrToCopyToken" class="underline untouch" onClick={this.CopyToClipboardToken}>{this.state.tokenAddress} </span>
         </div>
 
         <div id="switch-2">
