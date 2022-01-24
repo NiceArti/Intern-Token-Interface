@@ -1,0 +1,86 @@
+*
+{
+  padding:0;
+  margin:0;
+  color: #dadada;
+  transition:0.2s ease;
+  font-weight:600;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+    border: 1px solid #dadada3a;
+    padding: 3px;
+    border-radius: 5px;
+  }
+
+
+#backg
+{ 
+    position:fixed;
+    width: 100%; 
+    height: 100%; 
+    background: linear-gradient(45deg, rgba(27,30,36,1) 10%, rgb(47, 53, 68) 100%);
+}
+body
+{
+    background: rgba(27,30,36,1);
+}
+header
+{
+  width:100%;
+  position: absolute;
+  text-align: center;
+  border-bottom: 2px solid #3b414b;
+}
+h1 { padding: 10px 0 10px 0; }
+
+content
+{
+    position: absolute;
+    width: 50%;
+    top:100px;
+    height: fit-content;
+    left: 50%;
+    transform: translate(-50%);
+    padding-bottom: 300px;
+}
+
+.grad
+{
+    margin-top: 50px;
+}
+
+.right
+{
+    position: absolute;
+    right:0;
+}
+
+.backBut
+{
+    text-decoration: none;
+    position: absolute;
+    left:50px;
+    top: 20px;
+}
+
+.backBut:hover
+{
+    text-decoration: underline;
+}
+
+hr
+{
+    margin-top: 20px;
+}
