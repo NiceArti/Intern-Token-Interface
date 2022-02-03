@@ -612,10 +612,11 @@ td
   {
     grid-template-rows:50px 1fr;
   }
-  #balance-box
+  #balance-box, .hover-l-bar a
   {
     display: none;
   }
+
 
  
 
