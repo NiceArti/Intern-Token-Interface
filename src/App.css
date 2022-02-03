@@ -548,7 +548,7 @@ td
 
   #navbar-l{
     position: fixed;
-    width: 80%;
+    width: 100vw;
     left: 50%;
     top:100%;
     transform: translate(-50%, -100%);
@@ -586,6 +586,12 @@ td
     overflow-y: scroll;
   }
 
+  .panel-data
+  {
+
+    overflow-x: scroll;
+  }
+
   .content-middle
   {
     display: grid;
@@ -599,7 +605,7 @@ td
 
   .l-head-content
   {
-    left:50px;
+    left:20px;
   }
   .content-head{text-align: center;}
   content
