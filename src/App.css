@@ -474,3 +474,144 @@ td
 }
 
 .underline:hover {text-decoration: underline;}
+
+.hover-l-bar ul li:last-child{display: none;}
+
+
+
+/* Responsive css */
+
+#mobile-balance
+{
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.45);
+  top: 0;
+  z-index: 10;
+}
+.balance-mob
+{
+  position: relative;
+  width: fit-content;
+  font-size: 2em;
+  padding: 30px 10px 30px 10px;
+  text-align: center;
+  background: var(--main-dark-primary);
+  border-radius: 20px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.addr-mob
+{
+  position: relative;
+  top: 120px;
+  background: var(--main-dark-primary);
+  box-shadow:inset 0px 0px 10px 0 #16171a;
+  width: 80%;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 20px;
+  overflow: hidden;
+  font-size: 2em;
+  text-align: center;
+}
+.mobile-balance-bg
+{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 70%;
+  height: 50%;
+  background: var(--container-primary);
+  border-radius: 30px;
+
+}
+
+@media only screen and (max-width: 1312px) 
+{
+  #main-container 
+  {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 150px 2fr 100px; 
+    gap: 10px 10px; 
+    grid-template-areas: 
+      "header"
+      "content"
+      "left-navbar"; 
+  }
+
+  #navbar-l{
+    position: fixed;
+    width: 80%;
+    left: 50%;
+    top:100%;
+    transform: translate(-50%, -100%);
+    z-index: 3;
+  }
+
+  .hover-l-bar
+  {
+    width:90%;
+    height: 80px;
+    
+  }
+  
+  
+  .hover-l-bar ul li
+  {
+    display: inline-block;
+  }
+
+  .hover-l-bar ul li:last-child{display: inline-block;}
+
+  .hover-l-bar ul li a,
+  .hover-l-bar a
+  {
+    display: block;
+    text-align: center;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .hover-l-bar ul{width: fit-content;}
+  .hover-l-bar a{width: fit-content; padding-left: 40px;}
+
+  body
+  {
+    overflow-y: scroll;
+  }
+
+  .content-middle
+  {
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows:1fr 1fr;
+    grid-template-areas: 
+      "internship-table"
+      "admin-functional"; 
+  }
+
+
+  .l-head-content
+  {
+    left:50px;
+  }
+  .content-head{text-align: center;}
+  content
+  {
+    grid-template-rows:50px 1fr;
+  }
+  #balance-box
+  {
+    display: none;
+  }
+
+ 
+
+
+}

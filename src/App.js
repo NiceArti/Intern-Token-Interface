@@ -82,6 +82,13 @@ class App extends Component {
     }
   };
 
+  showBalance()
+  {
+    let balance = document.getElementById("mobile-balance")
+    if(balance.style.display === "none") balance.style.display = "block";
+    else balance.style.display = "none";
+  }
+
   enableMint()
   {
     var mint = document.getElementById("mint");
@@ -614,6 +621,13 @@ class App extends Component {
             </div>
           </div>
         </header>
+
+          <div id="mobile-balance" onClick={this.showBalance}>
+            <div class="mobile-balance-bg">
+              <div class="addr-mob"id="addrToCopy"onClick={this.CopyToClipboard}>{this.state.accounts}</div>
+              <div class="balance-mob">{this.state.balanceOfMsgSender} INT </div>
+            </div>
+          </div>
 
           <content>
           <div class="content-head untouch">
