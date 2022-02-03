@@ -586,12 +586,6 @@ td
     overflow-y: scroll;
   }
 
-  .panel-data
-  {
-
-    overflow-x: scroll;
-  }
-
   .content-middle
   {
     display: grid;
