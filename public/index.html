@@ -14,6 +14,7 @@
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
+    <link href="src/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
@@ -24,24 +25,192 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Intern Token app</title>
+    <title>Metamorphose admin dashboard</title>
   </head>
   <body>
-    <div id="backg"></div>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <header>
-      <h1>Intern Token</h1>
-    </header>
+    <div id="background"></div>
+    <div id="main-container">
+      <noscript>You need to enable JavaScript to run this app.</noscript>
+      
 
-    <nav class="right-sided-header">
-      <a class="dot" href="homeworks/hw1.html">
-        <nav class="dot-content untouch">Homework_1</nav>
-      </a>
+      <nav id="navbar-l">
+        <div class="hover-l-bar">
+          <a href="#"><i class="fas fa-user-tie"></i></a>
+          <ul>
+            <li><a href="homeworks/hw1.html"><i class="fas fa-book"></i> 1</a></li>
+            <li><a href="homeworks/hw2.html"><i class="fas fa-book"></i> 2</a></li>
+            <li><a href="#"><i class="fas fa-book"></i> 3</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+      <!-- <content>
+        <div class="content-head untouch">
+          Internship
+        </div>
+        <div class="content-middle">
+          <div class="admin-functional">
+            <div class="panel">
+              <div class="panel-head">
+                <span class="untouch">Admin functionality</span>
+              </div>
 
-      <a class="dot" href="homeworks/hw2.html">
-        <nav class="dot-content">Homework_2</nav>
-      </a>
-    </nav>
-    <div id="root"></div>
+              <div class="panel-main">
+                <div class="panel-content">
+                  <form name="TransferForm" onSubmit={this.transfer}>
+                    <input type="text" placeholder="0x38HG4NO..." id="address" onChange={this.to}/>
+                    <input type="text" placeholder="10" id="transferVal" class="amount" onChange={this.amount} onKeyUp={this.enableTransfer}/>
+                    <input type="submit" id="transfer" disabled="true" value="Transfer"/>
+                  </form>
+                  <br/> <br/>
+                  <form name="MintForm" onSubmit={this.mint}>
+                    <input type="text" placeholder="0x38HG4NO..." id="address" onChange={this.to}/>
+                    <input type="text" placeholder="10" id="mintVal" class="amount" onKeyUp={this.enableMint} onChange={this.amount}/>
+                    <input type="submit" id="mint" disabled="true" value="Mint"/>
+                  </form>
+                  <br/> <br/>
+                  <form name="BurnForm" onSubmit={this.burn}>
+                    <input type="text" placeholder="0x38HG4NO..." id="address" onChange={this.to}/>
+                    <input type="text" placeholder="10" id="burnVal" class="amount" onChange={this.amount} onKeyUp={this.enableBurn}/>
+                    <input type="submit" id="burn" disabled="true" value="Burn"/>
+                  </form>
+                  <br/> <br/>
+                  <form name="WhiteListForm" onSubmit={this.addToWhitelist}>
+                    <input type="text" placeholder="0x38HG4NO..." id="wlVal" onChange={this.to} onKeyUp={this.enableWl}/>
+                    <input type="submit" id="addToWhitelist" disabled="true" value="Add in whitelist"/>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="internship-table">
+            <div class="panel">
+              <div class="panel-head"><span class="untouch">Teammates<i class="fas fa-users"></i></span></div>
+              <div class="panel-main">
+                <div class="panel-data">
+                  <table>
+                    <tbody> 
+                      <tr>
+                        <td class="untouch">
+                          <div class="photo">
+                            <span>Photo</span>
+                          </div>
+                        </td>
+                        <td class="untouch" id="1" onClick={this.CopyToClipboard1}>
+                          <div class="more-inf">
+                            <ul class="more-if-header">
+                              <li>Alexander</li>
+                              <li>developer</li>
+                            </ul>  
+                            
+                            <span class="underline acc-addr">0xb0eDDC579AF621657dC0A7CE3016FA02a35B616A</span>
+                          </div>
+                        </td>
+                        <td class="untouch">{this.state.balanceOfSasha} INT</td>
+                      </tr>
+                      <tr>
+                        <td class="untouch">
+                          <div class="photo">
+                            <span>Photo</span>
+                          </div>
+                        </td>
+                        <td class="untouch" id="2" onClick={this.CopyToClipboard2}>
+                          <div class="more-inf">
+                            <ul class="more-if-header">
+                              <li>Vladimir</li>
+                              <li>developer</li>
+                            </ul> 
+                            
+                            <span class="underline acc-addr">0xc1fADc7346e3f3D36c29cdb88725679416bd603a</span>
+                          </div>
+                        </td>
+                        <td class="untouch">{this.state.balanceOfVova} INT</td>
+                      </tr>
+                      <tr>
+                        <td class="untouch">
+                          <div class="photo">
+                            <span>Photo</span>
+                          </div>
+                        </td>
+                        <td class="untouch" id="5" onClick={this.CopyToClipboard5}>
+                          <div class="more-inf">
+                            <ul class="more-if-header">
+                              <li>Igor</li>
+                              <li>developer</li>
+                            </ul> 
+                            
+                            <span class="underline acc-addr">0xdB44F63e0Ae6F2166c2f990a4dC877D4bDDCa500</span>
+                          </div>
+                        </td>
+                        <td class="untouch">{this.state.balanceOfIgor} INT</td>
+                      </tr>
+                      <tr>
+                        <td class="untouch">
+                          <div class="photo">
+                            <span>Photo</span>
+                          </div>
+                        </td>
+                        <td class="untouch" id="7" onClick={this.CopyToClipboard7}>
+                          <div class="more-inf">
+                            <ul class="more-if-header">
+                              <li>Egor</li>
+                              <li>developer</li>
+                            </ul> 
+                            
+                            <span class="underline acc-addr">0x0B89aafa6328dbA176Ea91eA04859241991c386A</span>
+                          </div>
+                          
+                        </td>
+                        <td class="untouch">{this.state.balanceOfEgor} INT</td>
+                      </tr>
+                      <tr>
+                        <td class="untouch">
+                          <div class="photo">
+                            <span>Photo</span>
+                          </div>
+                        </td>
+                        <td class="untouch" id="8" onClick={this.CopyToClipboard8}>
+                          <div class="more-inf">
+                            <ul class="more-if-header">
+                              <li>Nicolai</li>
+                              <li>developer</li>
+                            </ul> 
+                            
+                            <span class="underline acc-addr">0x468172566756063Cc52ab6C020aE9c9583D9AB95</span>
+                          </div>
+                        </td>
+                        <td class="untouch">{this.state.balanceOfNicolai} INT</td>
+                      </tr>
+                      <tr>
+                        <td class="untouch">
+                          <div class="photo">
+                            <span>Photo</span>
+                          </div>
+                        </td>
+                        <td class="untouch" id="9" onClick={this.CopyToClipboard9}>
+                          <div class="more-inf">
+                            <ul class="more-if-header">
+                              <li>Slava</li>
+                              <li>developer</li>
+                            </ul> 
+                            
+                            <span class="underline acc-addr">0x48c5e730125565435e9E9D70CbD680bb7819bbCD</span>
+                          </div>
+                           
+                        
+                        </td>
+                        <td class="untouch">{this.state.balanceOfSlava} INT</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </content> -->
+
+      <div id="root"></div>
+    </div>
   </body>
 </html>

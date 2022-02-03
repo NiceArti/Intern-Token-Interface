@@ -53,6 +53,8 @@ class App extends Component {
 
       const tokenAddress = deployedNetwork.address;
 
+      
+
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.
       this.setState(
@@ -423,128 +425,367 @@ class App extends Component {
   render() {
     if (!this.state.web3) {
       return (
-        <div class="switch">
-          Wait untill loading!<br/> <br/>
-          If loading is too long<br/>
-          switch network to Ropsten <br/>
-          or send message to developers!!!
+        <div>
+          <header>
+            <div class="l-head">
+              <div class="l-head-content">
+                <ul id="logo">
+                  <li><span class="logo-text untouch">Metamorphosis</span></li>
+                  <li><span class="untouch">Master panel</span></li>
+                </ul>
+
+                <span class='status untouch'>internship</span>
+              </div>
+            </div>
+          </header>
+
+          <content>
+          <div class="content-head untouch">
+            Internship
+          </div>
+          <div class="content-middle">
+            <div class="admin-functional">
+              <div class="panel">
+                <div class="panel-head">
+                  <span class="untouch">Admin functionality</span>
+                </div>
+
+                <div class="panel-main">
+                  <div class="panel-content">
+                    <form name="TransferForm" onSubmit={this.transfer}>
+                      <input type="text" placeholder="0x38HG4NO..." id="address" onChange={this.to}/>
+                      <input type="text" placeholder="10" id="transferVal" class="amount" onChange={this.amount} onKeyUp={this.enableTransfer}/>
+                      <input type="submit" id="transfer" disabled="true" value="Transfer"/>
+                    </form>
+                    <br/> <br/>
+                    <form name="MintForm" onSubmit={this.mint}>
+                      <input type="text" placeholder="0x38HG4NO..." id="address" onChange={this.to}/>
+                      <input type="text" placeholder="10" id="mintVal" class="amount" onKeyUp={this.enableMint} onChange={this.amount}/>
+                      <input type="submit" id="mint" disabled="true" value="Mint"/>
+                    </form>
+                    <br/> <br/>
+                    <form name="BurnForm" onSubmit={this.burn}>
+                      <input type="text" placeholder="0x38HG4NO..." id="address" onChange={this.to}/>
+                      <input type="text" placeholder="10" id="burnVal" class="amount" onChange={this.amount} onKeyUp={this.enableBurn}/>
+                      <input type="submit" id="burn" disabled="true" value="Burn"/>
+                    </form>
+                    <br/> <br/>
+                    <form name="WhiteListForm" onSubmit={this.addToWhitelist}>
+                      <input type="text" placeholder="0x38HG4NO..." id="wlVal" onChange={this.to} onKeyUp={this.enableWl}/>
+                      <input type="submit" id="addToWhitelist" disabled="true" value="Add in whitelist"/>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="internship-table">
+              <div class="panel">
+                <div class="panel-head"><span class="untouch">Teammates<i class="fas fa-users"></i></span></div>
+                <div class="panel-main">
+                  <div class="panel-data">
+                    <table>
+                      <tbody> 
+                        <tr>
+                          <td class="untouch">
+                            <div class="photo">
+                              <span>Photo</span>
+                            </div>
+                          </td>
+                          <td class="untouch">
+                            <div class="more-inf">
+                              <ul class="more-if-header">
+                                <li>Alexander</li>
+                                <li>developer</li>
+                              </ul>  
+                            
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="untouch">
+                            <div class="photo">
+                              <span>Photo</span>
+                            </div>
+                          </td>
+                          <td class="untouch">
+                            <div class="more-inf">
+                              <ul class="more-if-header">
+                                <li>Vladimir</li>
+                                <li>developer</li>
+                              </ul> 
+                              
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="untouch">
+                            <div class="photo">
+                              <span>Photo</span>
+                            </div>
+                          </td>
+                          <td class="untouch">
+                            <div class="more-inf">
+                              <ul class="more-if-header">
+                                <li>Igor</li>
+                                <li>developer</li>
+                              </ul> 
+                              
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="untouch">
+                            <div class="photo">
+                              <span>Photo</span>
+                            </div>
+                          </td>
+                          <td class="untouch">
+                            <div class="more-inf">
+                              <ul class="more-if-header">
+                                <li>Egor</li>
+                                <li>developer</li>
+                              </ul> 
+                              
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="untouch">
+                            <div class="photo">
+                              <span>Photo</span>
+                            </div>
+                          </td>
+                          <td class="untouch">
+                            <div class="more-inf">
+                              <ul class="more-if-header">
+                                <li>Nicolai</li>
+                                <li>developer</li>
+                              </ul> 
+                              
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="untouch">
+                            <div class="photo">
+                              <span>Photo</span>
+                            </div>
+                          </td>
+                          <td class="untouch">
+                            <div class="more-inf">
+                              <ul class="more-if-header">
+                                <li>Slava</li>
+                                <li>developer</li>
+                              </ul> 
+                             
+                            </div>
+
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </content>
         </div>
+        
       );
     }
     return (
       <div className="App">
-        <div id="header">
-          <span id="balance" >Balance: {this.state.balanceOfMsgSender} INT</span>
-          <span id="account" >
-            <span class="account-type">Account: </span>
-            <span id="addrToCopy" class="underline untouch" onClick={this.CopyToClipboard}>{this.state.accounts}</span>
-          </span>
-        </div>
+        <header>
+          <div class="l-head">
+            <div class="l-head-content">
+              <ul id="logo">
+                <li><span class="logo-text untouch">Metamorphosis</span></li>
+                <li><span class="untouch">Master panel</span></li>
+              </ul>
 
-        <div id="content">
-          <form name="TransferForm" onSubmit={this.transfer}>
-            <input type="submit" id="transfer" disabled="true" value="Transfer"/>
-            <input type="text" placeholder="0x38HG4NO..." id="address" onChange={this.to}/>
-            <input type="text" placeholder="10" id="transferVal" class="amount" onChange={this.amount} onKeyUp={this.enableTransfer}/>
-          </form>
-          
-          <form name="MintForm" onSubmit={this.mint}>
-            <input type="submit" id="mint" disabled="true" value="Mint"/>
-            <input type="text" placeholder="0x38HG4NO..." id="address" onChange={this.to}/>
-            <input type="text" placeholder="10" id="mintVal" class="amount" onKeyUp={this.enableMint} onChange={this.amount}/>
-          </form>
+              <span class='status untouch'>internship</span>
+            </div>
+          </div>
 
-          <form name="BurnForm" onSubmit={this.burn}>
-            <input type="submit" id="burn" disabled="true" value="Burn"/>
-            <input type="text" placeholder="0x38HG4NO..." id="address" onChange={this.to}/>
-            <input type="text" placeholder="10" id="burnVal" class="amount" onChange={this.amount} onKeyUp={this.enableBurn}/>
-          </form>
+          <div clas="r-head">
+            <div id="balance-box">
+              <span class="balance untouch">{this.state.balanceOfMsgSender} INT </span>
+              <span id="addrToCopy" class="address" onClick={this.CopyToClipboard}>{this.state.accounts}</span>
+            </div>
+          </div>
+        </header>
 
-          <form name="WhiteListForm" onSubmit={this.addToWhitelist}>
-            <input type="submit" id="addToWhitelist" disabled="true" value="Add in whitelist"/>
-            <input type="text" placeholder="0x38HG4NO..." id="wlVal" onChange={this.to} onKeyUp={this.enableWl}/>
-          </form>
-        </div>
+          <content>
+          <div class="content-head untouch">
+            Internship
+          </div>
+          <div class="content-middle">
+            <div class="admin-functional">
+              <div class="panel">
+                <div class="panel-head">
+                  <span class="untouch">Admin functionality</span>
+                </div>
 
-        <div id="content-inner">
-          <table>
-            <thead>
-              <tr>
-                <th class="untouch">Telegram</th>
-                <th class="untouch">Name</th>
-                <th class="untouch">Address</th>
-                <th class="untouch">Balance</th>
-              </tr>
-            </thead>
-            <tbody> 
-              <tr>
-                <td>@flexxxbob</td>
-                <td class="untouch">Alexander</td>
-                <td class="underline untouch" id="1" onClick={this.CopyToClipboard1}> 0xb0eDDC579AF621657dC0A7CE3016FA02a35B616A</td>
-                <td class="untouch">{this.state.balanceOfSasha} INT</td>
-              </tr>
-              <tr>
-                <td>@Valdemar1337</td>
-                <td class="untouch">Vladimir</td>
-                <td class="underline untouch" id="2" onClick={this.CopyToClipboard2}>0xc1fADc7346e3f3D36c29cdb88725679416bd603a</td>
-                <td class="untouch">{this.state.balanceOfVova} INT</td>
-              </tr>
-              <tr>
-                <td>@Nektarines</td>
-                <td class="untouch">Nichita</td>
-                <td class="underline untouch" id="3" onClick={this.CopyToClipboard3}>0xcfcb8fee75E86865718f608B3BCcB582B4D7C560</td>
-                <td class="untouch">{this.state.balanceOfNikita} INT</td>
-              </tr>
-              <tr>
-                <td>@zhaukenove</td>
-                <td class="untouch">Yerkebulan</td>
-                <td class="underline untouch" id="4" onClick={this.CopyToClipboard4}>0x2787DeB7Cb801858CfD3AE8532C15EAa9b6925F2</td>
-                <td class="untouch">{this.state.balanceOfErke} INT</td>
-              </tr>
-              <tr>
-                <td>@Igorterzi</td>
-                <td class="untouch">Igor</td>
-                <td class="underline untouch" id="5" onClick={this.CopyToClipboard5}>0xdB44F63e0Ae6F2166c2f990a4dC877D4bDDCa500</td>
-                <td class="untouch">{this.state.balanceOfIgor} INT</td>
-              </tr>
-              <tr>
-                <td>@vadim_peev</td>
-                <td class="untouch">Vadim</td>
-                <td class="underline untouch" id="6" onClick={this.CopyToClipboard6}>0x27bE67f7EEd685E4eBe96e0B0DE08A9f30b8b8D2</td>
-                <td class="untouch">{this.state.balanceOfVadim} INT</td>
-              </tr>
-              <tr>
-                <td>@sweetbubalehj</td>
-                <td class="untouch">Egor</td>
-                <td class="underline untouch" id="7" onClick={this.CopyToClipboard7}>0x0B89aafa6328dbA176Ea91eA04859241991c386A</td>
-                <td class="untouch">{this.state.balanceOfEgor} INT</td>
-              </tr>
-              <tr>
-                <td>@Kcintes</td>
-                <td class="untouch">Nicolai</td>
-                <td class="underline untouch" id="8" onClick={this.CopyToClipboard8}>0x468172566756063Cc52ab6C020aE9c9583D9AB95</td>
-                <td class="untouch">{this.state.balanceOfNicolai} INT</td>
-              </tr>
-              <tr>
-                <td>@s_tomayli</td>
-                <td class="untouch">Slava</td>
-                <td class="underline untouch" id="9" onClick={this.CopyToClipboard9}>0x48c5e730125565435e9E9D70CbD680bb7819bbCD</td>
-                <td class="untouch">{this.state.balanceOfSlava} INT</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div id="token">
-          <span class="account-type">Token: </span>
-          <span id="addrToCopyToken" class="underline untouch" onClick={this.CopyToClipboardToken}>{this.state.tokenAddress} </span>
-        </div>
-
+                <div class="panel-main">
+                  <div class="panel-content">
+                    <form name="TransferForm" onSubmit={this.transfer}>
+                      <input type="text" placeholder="0x38HG4NO..." id="address" onChange={this.to}/>
+                      <input type="text" placeholder="10" id="transferVal" class="amount" onChange={this.amount} onKeyUp={this.enableTransfer}/>
+                      <input type="submit" id="transfer" disabled="true" value="Transfer"/>
+                    </form>
+                    <br/> <br/>
+                    <form name="MintForm" onSubmit={this.mint}>
+                      <input type="text" placeholder="0x38HG4NO..." id="address" onChange={this.to}/>
+                      <input type="text" placeholder="10" id="mintVal" class="amount" onKeyUp={this.enableMint} onChange={this.amount}/>
+                      <input type="submit" id="mint" disabled="true" value="Mint"/>
+                    </form>
+                    <br/> <br/>
+                    <form name="BurnForm" onSubmit={this.burn}>
+                      <input type="text" placeholder="0x38HG4NO..." id="address" onChange={this.to}/>
+                      <input type="text" placeholder="10" id="burnVal" class="amount" onChange={this.amount} onKeyUp={this.enableBurn}/>
+                      <input type="submit" id="burn" disabled="true" value="Burn"/>
+                    </form>
+                    <br/> <br/>
+                    <form name="WhiteListForm" onSubmit={this.addToWhitelist}>
+                      <input type="text" placeholder="0x38HG4NO..." id="wlVal" onChange={this.to} onKeyUp={this.enableWl}/>
+                      <input type="submit" id="addToWhitelist" disabled="true" value="Add in whitelist"/>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="internship-table">
+              <div class="panel">
+                <div class="panel-head"><span class="untouch">Teammates<i class="fas fa-users"></i></span></div>
+                <div class="panel-main">
+                  <div class="panel-data">
+                    <table>
+                      <tbody> 
+                        <tr>
+                          <td class="untouch">
+                            <div class="photo">
+                              <span>Photo</span>
+                            </div>
+                          </td>
+                          <td class="untouch">
+                            <div class="more-inf">
+                              <ul class="more-if-header">
+                                <li>Alexander</li>
+                                <li>developer</li>
+                              </ul>  
+                              
+                              <span class="underline acc-addr"  id="1" onClick={this.CopyToClipboard1}>0xb0eDDC579AF621657dC0A7CE3016FA02a35B616A</span>
+                            </div>
+                          </td>
+                          <td class="untouch">{this.state.balanceOfSasha} INT</td>
+                        </tr>
+                        <tr>
+                          <td class="untouch">
+                            <div class="photo">
+                              <span>Photo</span>
+                            </div>
+                          </td>
+                          <td class="untouch">
+                            <div class="more-inf">
+                              <ul class="more-if-header">
+                                <li>Vladimir</li>
+                                <li>developer</li>
+                              </ul> 
+                              
+                              <span class="underline acc-addr"  id="2" onClick={this.CopyToClipboard2}>0xc1fADc7346e3f3D36c29cdb88725679416bd603a</span>
+                            </div>
+                          </td>
+                          <td class="untouch">{this.state.balanceOfVova} INT</td>
+                        </tr>
+                        <tr>
+                          <td class="untouch">
+                            <div class="photo">
+                              <span>Photo</span>
+                            </div>
+                          </td>
+                          <td class="untouch">
+                            <div class="more-inf">
+                              <ul class="more-if-header">
+                                <li>Igor</li>
+                                <li>developer</li>
+                              </ul> 
+                              
+                              <span class="underline acc-addr"  id="5" onClick={this.CopyToClipboard5}>0xdB44F63e0Ae6F2166c2f990a4dC877D4bDDCa500</span>
+                            </div>
+                          </td>
+                          <td class="untouch">{this.state.balanceOfIgor} INT</td>
+                        </tr>
+                        <tr>
+                          <td class="untouch">
+                            <div class="photo">
+                              <span>Photo</span>
+                            </div>
+                          </td>
+                          <td class="untouch">
+                            <div class="more-inf">
+                              <ul class="more-if-header">
+                                <li>Egor</li>
+                                <li>developer</li>
+                              </ul> 
+                              
+                              <span class="underline acc-addr"  id="7" onClick={this.CopyToClipboard7}>0x0B89aafa6328dbA176Ea91eA04859241991c386A</span>
+                            </div>
+                            
+                          </td>
+                          <td class="untouch">{this.state.balanceOfEgor} INT</td>
+                        </tr>
+                        <tr>
+                          <td class="untouch">
+                            <div class="photo">
+                              <span>Photo</span>
+                            </div>
+                          </td>
+                          <td class="untouch">
+                            <div class="more-inf">
+                              <ul class="more-if-header">
+                                <li>Nicolai</li>
+                                <li>developer</li>
+                              </ul> 
+                              
+                              <span class="underline acc-addr"  id="8" onClick={this.CopyToClipboard8}>0x468172566756063Cc52ab6C020aE9c9583D9AB95</span>
+                            </div>
+                          </td>
+                          <td class="untouch">{this.state.balanceOfNicolai} INT</td>
+                        </tr>
+                        <tr>
+                          <td class="untouch">
+                            <div class="photo">
+                              <span>Photo</span>
+                            </div>
+                          </td>
+                          <td class="untouch">
+                            <div class="more-inf">
+                              <ul class="more-if-header">
+                                <li>Slava</li>
+                                <li>developer</li>
+                              </ul> 
+                              
+                              <span class="underline acc-addr"  id="9" onClick={this.CopyToClipboard9}>0x48c5e730125565435e9E9D70CbD680bb7819bbCD</span>
+                            </div>
+                            
+                          
+                          </td>
+                          <td class="untouch">{this.state.balanceOfSlava} INT</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </content>
+       
         <div id="switch-2">
           Copied
-        </div>
+        </div> 
       </div>
-
       
     );
   }
