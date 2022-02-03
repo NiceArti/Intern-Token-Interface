@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Intern-Token-Interface/static/css/main.0f8b39f0.chunk.css",
+    "main.css": "/Intern-Token-Interface/static/css/main.37cb0d22.chunk.css",
     "main.js": "/Intern-Token-Interface/static/js/main.44f18df5.chunk.js",
     "main.js.map": "/Intern-Token-Interface/static/js/main.44f18df5.chunk.js.map",
     "runtime-main.js": "/Intern-Token-Interface/static/js/runtime-main.26bb4312.js",
@@ -8,14 +8,14 @@
     "static/js/2.7728f5e7.chunk.js": "/Intern-Token-Interface/static/js/2.7728f5e7.chunk.js",
     "static/js/2.7728f5e7.chunk.js.map": "/Intern-Token-Interface/static/js/2.7728f5e7.chunk.js.map",
     "index.html": "/Intern-Token-Interface/index.html",
-    "precache-manifest.b46f7911b4d162bee969cc68f75d1f00.js": "/Intern-Token-Interface/precache-manifest.b46f7911b4d162bee969cc68f75d1f00.js",
+    "precache-manifest.4eadb5362bb5fd86ecfd4d425f94afad.js": "/Intern-Token-Interface/precache-manifest.4eadb5362bb5fd86ecfd4d425f94afad.js",
     "service-worker.js": "/Intern-Token-Interface/service-worker.js",
-    "static/css/main.0f8b39f0.chunk.css.map": "/Intern-Token-Interface/static/css/main.0f8b39f0.chunk.css.map"
+    "static/css/main.37cb0d22.chunk.css.map": "/Intern-Token-Interface/static/css/main.37cb0d22.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.26bb4312.js",
     "static/js/2.7728f5e7.chunk.js",
-    "static/css/main.0f8b39f0.chunk.css",
+    "static/css/main.37cb0d22.chunk.css",
     "static/js/main.44f18df5.chunk.js"
   ]
 }
